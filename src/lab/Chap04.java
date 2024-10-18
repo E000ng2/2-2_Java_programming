@@ -31,13 +31,12 @@ public class Chap04 {
 
         Circle pizza = new Circle(11);
         Circle donut = new Circle(3);
-        System.out.printf("파자 %d인치, 도넛 %d인치\n", pizza.radius, donut.radius);
+        System.out.printf("피자 %d인치, 도넛 %d인치\n", pizza.radius, donut.radius);
 
         pizza = donut; // 메모리 누수, pizza의 접근 방법이 사라짐
-        System.out.printf("파자 %d인치, 도넛 %d인치\n", pizza.radius, donut.radius);
-        
+        System.out.printf("피자 %d인치, 도넛 %d인치\n", pizza.radius, donut.radius);
         donut.radius = 7;
-        System.out.printf("파자 %d인치, 도넛 %d인치\n", pizza.radius, donut.radius);
+        System.out.printf("피자 %d인치, 도넛 %d인치\n", pizza.radius, donut.radius);
 
         int [] nums = new int[3];
         for (int i =0; i < 3; i++)
