@@ -1,7 +1,7 @@
 package lab;
 import java.util.*;
 
-public class Chap04_ex02 {
+public class Java_chap04_ex02 {
 
 	//함수 (function)를 정의하는 방법
 	

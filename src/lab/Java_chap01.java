@@ -62,7 +62,7 @@ package lab;
 
 
 //Java 프로그램 개발
-public class Java_chap1 { // 클래스 선언문 / java_chap1 : 클래스 이름 / {와} 사이에 정의 / 자바는 하나 이상의 클래스로 구성
+public class Java_chap01 { // 클래스 선언문 / java_chap1 : 클래스 이름 / {와} 사이에 정의 / 자바는 하나 이상의 클래스로 구성
     public static void main(String[] args){ // 자바 프로그램은 main()메소드에서 실행 시작 / 실행을 시작하는 클래스 main() 메소드가 반드시 하나 존재 
 
         int n = 2030; //지역 변수 선언

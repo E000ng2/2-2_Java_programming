@@ -13,7 +13,7 @@ package lab;
                 상수(모든 문자 대문자) ex) PI
  */
 
-public class Java_chap2 { //java 이름의 클래스 선언
+public class Java_chap02 { //java 이름의 클래스 선언
     public static int sum(int n, int m){
         return n + m;
     }
