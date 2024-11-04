@@ -1,7 +1,7 @@
 package lab;
 import java.util.Scanner;
 
-public class Java_lab_01 {
+public class Java_lab_01_01 {
 	
 	public static void main(String[] args) {
 		
@@ -13,10 +13,8 @@ public class Java_lab_01 {
 				{"09:00", "10:00", "11:00"}, //내과
 				{"13:00", "14:00", "15:00"}, //외과
 				{"10:00", "11:00", "12:00"}, //소아과
-				{"14:00", "15:00", "16:00"}  //정형외과
-				
+				{"14:00", "15:00", "16:00"}  //정형외과	
 		};
-		
 		
 		int[][] reservations = new int[departments.length][3];
 		
@@ -27,7 +25,6 @@ public class Java_lab_01 {
 		System.out.println("3. 종료");
 		System.out.print("원하는 작업을 선택하세요 : ");
 		int mchoice = s.nextInt();
-		
 		
 			if (mchoice == 1) //1. 예약하기
 			{
@@ -48,7 +45,8 @@ public class Java_lab_01 {
 				System.out.println(departments[deptchoice] + "의 예약가능한 시간대");
 				for (int i = 0; i < (timeSlots[deptchoice].length); i ++)
 				{
-					System.out.printf("%d. %s (예약 가능 : %d명)\n", i+1, timeSlots[deptchoice][i], 3-reservations[deptchoice][i]);
+					System.out.printf("%d. %s (예약 가능 : %d명)\n", 
+					i+1, timeSlots[deptchoice][i], 3-reservations[deptchoice][i]);
 				}
 				System.out.print("원하는 시간대의 번호를 선택하세요 : ");
 				int timechoice = s.nextInt() - 1 ;
@@ -64,7 +62,8 @@ public class Java_lab_01 {
 				if (reservations[deptchoice][timechoice] < 3)
 				{
 					reservations[deptchoice][timechoice] += 1;
-					System.out.printf("예약이 완료 되었습니다. %s 과목의 %s 시간대로 예약이 되었습니다.\n", departments[deptchoice], timeSlots[deptchoice][timechoice]);
+					System.out.printf("예약이 완료 되었습니다. %s 과목의 %s 시간대로 예약이 되었습니다.\n",
+					departments[deptchoice], timeSlots[deptchoice][timechoice]);
 				}
 				else
 				{
@@ -72,8 +71,6 @@ public class Java_lab_01 {
 				}
 			}
 		
-			
-			
 			else if (mchoice == 2) //예약 현황 보기
 			{
 				System.out.println("예약 현황");
@@ -82,31 +79,26 @@ public class Java_lab_01 {
 					System.out.println(departments[deptIdx] + ":");
 					for (int timeIdx = 0; timeIdx < (timeSlots[deptIdx].length); timeIdx++)
 					{
-						System.out.printf("%s - 예약 현황 : %d/3\n", timeSlots[deptIdx][timeIdx], reservations[deptIdx][timeIdx]);
+						System.out.printf("%s - 예약 현황 : %d/3\n", 
+						timeSlots[deptIdx][timeIdx], reservations[deptIdx][timeIdx]);
 					}
 					System.out.println("");
-				}
-				
+				}	
 			}
 			
 			else if (mchoice == 3) //종료
 			{
 				System.out.println("종료합니다.");
-				break;
-				
+				break;	
 			}
 			
 			else 
 			{
 				System.out.println("1~3 사이의 숫자를 입력하세요.");
-			}
-			
+			}	
 		}
-		
 		
 		s.close();
 		
-		
 	}
-
 }

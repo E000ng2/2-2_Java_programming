@@ -47,8 +47,9 @@ public class Chap04 {
         Circle [] circles = new Circle[3];
         for (int i = 0; i < circles.length; i++)
         {
-            circles[i] = new Circle(); // 객체형 배열의 각 원소에 대한 객체를 생성해야 한다!
-            circles[i].radius = i * 3;
+            circles[i] = new Circle(i * 3); // 객체형 배열의 각 원소에 대한 객체를 생성해야 한다!
+            // circles[i].radius = i * 3;
+            System.out.printf("%d %.2f\n",circles[i].radius,circles[i].getArea());
         }
 
     }

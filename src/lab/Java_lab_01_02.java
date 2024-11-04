@@ -2,7 +2,7 @@ package lab;
 
 import java.util.Scanner;
 
-public class Java_lab_02 {
+public class Java_lab_01_02 {
 
 	public static void main(String[] args) {
 		
@@ -28,7 +28,8 @@ public class Java_lab_02 {
 					System.out.printf("영화 %d의 제목을 입력하세요 : ", i+1); //영화 제목입력
 					String movieTitle = s.next();
 					movies[i] = movieTitle;
-					System.out.printf("'%s' 영화의 각 카테고리 평점을 입력하세요 (1~5) : \n", movieTitle); //각 카테고리 평점입력 (스토리 연출, 연기, 음악, 시각효과)
+					System.out.printf("'%s' 영화의 각 카테고리 평점을 입력하세요 (1~5) : \n", 
+					movieTitle); //각 카테고리 평점입력 (스토리 연출, 연기, 음악, 시각효과)
 					
 					//scoreTable 채우기
 					for (int j = 0; j <(category.length); j++)
@@ -73,13 +74,15 @@ public class Java_lab_02 {
 				//각 영화별 평균 평점 출력
 				for (int i = 0; i <movieCnt; i++)
 				{
-					System.out.printf("'%s' 평균 평점 : %.1f\n",movies[i], meanTable[i] );
+					System.out.printf("'%s' 평균 평점 : %.1f\n",
+					movies[i], meanTable[i] );
 				}
 				
 				//각 카테고리별 평균 평점 출력
 				for (int i = 0; i < category.length; i ++)
 				{
-					System.out.printf("'%s' 평균 : %.1f\n", category[i], category_meanTable[i]);
+					System.out.printf("'%s' 평균 : %.1f\n", 
+					category[i], category_meanTable[i]);
 				}
 				
 				//최고 평점 영화 찾기(인덱스 넘버 찾기)
@@ -93,8 +96,8 @@ public class Java_lab_02 {
 				}
 				
 				//최고 평점 영화 출력
-				System.out.printf("평균평점이 가장 높은 영화 : '%s'\n", movies[max_Idx]);
-				
+				System.out.printf("평균평점이 가장 높은 영화 : '%s'\n", 
+				movies[max_Idx]);
 				
 			}
 			else
@@ -105,14 +108,11 @@ public class Java_lab_02 {
 			}
 			s.close();
 		}
-		
-		
-		
+
 		//영화 평균 평점 (평균평점이 가장 높은 영화:)
 		
 		//카테고리펼 평균 평점
 		
-
 	}
 
 }

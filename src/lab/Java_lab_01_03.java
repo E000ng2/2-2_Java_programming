@@ -2,7 +2,7 @@ package lab;
 
 import java.util.Scanner;
 
-public class Java_lab_03 {
+public class Java_lab_01_03 {
 
 	public static void main(String[] args) {
 
@@ -17,7 +17,8 @@ public class Java_lab_03 {
 
 			for (int j = 0; j < product_names.length; j++) {
 				product_sells[i][j] = (int) (Math.random() * 10000) % 100;
-				System.out.printf("상품 %s의 판매 수량을 입력하세요:%d\n", product_names[j], product_sells[i][j]);
+				System.out.printf("상품 %s의 판매 수량을 입력하세요:%d\n", 
+				product_names[j], product_sells[i][j]);
 			}
 			System.out.println("");
 		}
@@ -28,12 +29,13 @@ public class Java_lab_03 {
 		System.out.println("=== 상품별 연간 판매 현황 ===");
 
 		for (int i = 0; i < product_names.length; i++) {
-			for (int j = 0; j < 12; j++) {
+			for (int j = 0; j < 12; j++)
+			{
 				produxt_yearlysell[i] += product_sells[j][i];
 			}
 
-			System.out.printf("상품 %s : 총 판매 수량 = %d, 평균 판매 수량 = %.2f\n", product_names[i], produxt_yearlysell[i],
-					(double) produxt_yearlysell[i] / 12);
+			System.out.printf("상품 %s : 총 판매 수량 = %d, 평균 판매 수량 = %.2f\n", 
+			product_names[i], produxt_yearlysell[i], (double) produxt_yearlysell[i] / 12);
 		}
 
 		// 연간 판매량이 가장 높은 상품
@@ -45,8 +47,8 @@ public class Java_lab_03 {
 		}
 
 		System.out.println("");
-		System.out.printf("연간 판매 수량이 가장 높은 상품 : %s (총 판매 수량 : %d)\n", product_names[Max_Idx],
-				produxt_yearlysell[Max_Idx]);
+		System.out.printf("연간 판매 수량이 가장 높은 상품 : %s (총 판매 수량 : %d)\n", 
+		product_names[Max_Idx], produxt_yearlysell[Max_Idx]);
 		System.out.println("");
 
 		
@@ -75,9 +77,6 @@ public class Java_lab_03 {
 		
 			s.close();	
 		}
-		
-		
-		
 		
 	}
 
